@@ -50,5 +50,5 @@ report += "\nSimple Code coverage report for C1: Missed #{missed} of #{sum.to_i}
 end
 message(report)
 else
-puts "Can not find jacoco report file: #{jacocoXml}"
+message "Can not find jacoco report file: #{jacocoXml}"
 end
