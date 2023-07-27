@@ -48,9 +48,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-${{ env.GRADLE_VERSION }}-
 
-#      - name: Run Gradle to cache
-#        if: startsWith(github.ref, env.DEFAULT_BRANCH) == true
-#        run: ./gradlew clean
+      - name: Run Gradle to cache
+        if: startsWith(github.ref, env.DEFAULT_BRANCH) == true
+        run: ./gradlew clean
 
       - name: Report github
         if: github.event_name == 'pull_request'
