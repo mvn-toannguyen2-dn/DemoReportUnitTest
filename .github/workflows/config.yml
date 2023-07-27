@@ -8,8 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      checks: write-all
+    permissions: write-all
 
     steps:
       - name: Checkout
