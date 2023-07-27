@@ -48,12 +48,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-${{ env.GRADLE_VERSION }}-
 
-      - name: Run Gradle to cache
-        if: startsWith(github.ref, env.DEFAULT_BRANCH) == true
-        run: ./gradlew clean
+#      - name: Run Gradle to cache
+#        if: startsWith(github.ref, env.DEFAULT_BRANCH) == true
+#        run: ./gradlew clean
 
       - name: Report github
-        env:
-          DANGER_GITHUB_API_TOKEN: ${{ secrets.DANGER_GITHUB_API_TOKEN }}
         if: github.event_name == 'pull_request'
         run: bundle exec danger --danger_id=check_style --dangerfile=Dangerfile
+        env:
+          DANGER_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
