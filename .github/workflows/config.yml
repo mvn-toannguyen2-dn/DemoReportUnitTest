@@ -55,3 +55,7 @@ jobs:
       - name: Report github
         if: github.event_name == 'pull_request'
         run: bundle exec danger --danger_id=check_style --dangerfile=Dangerfile
+          action "Danger" {
+          uses = "danger/danger"
+          secrets = ["DANGER_GITHUB_API_TOKEN"]
+          }
