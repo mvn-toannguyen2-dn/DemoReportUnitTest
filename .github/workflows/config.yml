@@ -20,7 +20,7 @@ jobs:
           java-version: 17
           distribution: 'temurin'
 
-      - name: Set up Ruby 2.6
+      - name: Set up Ruby
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 3.0
