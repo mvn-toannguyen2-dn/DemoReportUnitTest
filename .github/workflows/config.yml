@@ -16,6 +16,9 @@ jobs:
         uses: actions/checkout@v3
       - name: Set up JDK 17
         uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: 'temurin'
 
       - name: Cache gem dependencies
         uses: actions/cache@v1
@@ -42,9 +45,6 @@ jobs:
       - name: Run Gradle to cache
         if: startsWith(github.ref, env.DEFAULT_BRANCH) == true
         run: ./gradlew clean
-        with:
-          java-version: 17
-          distribution: 'temurin'
 
       - name: Report github
         if: github.event_name == 'pull_request'
