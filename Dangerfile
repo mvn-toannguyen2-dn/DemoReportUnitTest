@@ -24,7 +24,7 @@ end
 markdown message unless failures.empty?
 
 # Report code coverage
-require 'nokogiri'
+# require 'nokogiri'
 
 # read and parse the old file
 jacocoXml = "app/build/reports/jacoco/jacocoTestReport/jacocoTestReport.xml"
