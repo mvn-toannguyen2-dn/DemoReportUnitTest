@@ -49,9 +49,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-${{ env.GRADLE_VERSION }}-
 
-      - name: Run Jacoco Test Report
+      - name: Run Gradle to cache
         if: startsWith(github.ref, env.DEFAULT_BRANCH) == true
-        run: ./gradlew jacocoTestReport
+        run: ./gradlew clean jacocoTestReport
 
       - name: Report github
         run: bundle exec danger --danger_id=check_style --dangerfile=Dangerfile
