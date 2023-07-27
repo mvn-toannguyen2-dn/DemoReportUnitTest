@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-gem 'danger', '4.3.1'
+gem 'danger'
 gem 'danger-android_lint'
 gem 'danger-checkstyle_format'
 gem 'danger-junit'
