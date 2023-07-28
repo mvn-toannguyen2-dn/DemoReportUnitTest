@@ -27,7 +27,7 @@ tasks.register<JacocoReport>("jacocoTestReport") {
 
     sourceDirectories.setFrom(files(mainSrc))
     classDirectories.setFrom(files(debugTree, kotlinDebugTree))
-    executionData.setFrom(files("${buildDir}/jacoco/test.exec"))
+    executionData.setFrom(files("${buildDir}/jacoco/testDebugUnitTest.exec"))
 }
 
 tasks.named("check") {
