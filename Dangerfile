@@ -40,7 +40,6 @@ sum = missed.to_f + covered.to_f
 coverage_c0 = (covered.to_f * 100 / sum).round(2)
     if coverage_c0 > 80
         report = "Simple Code coverage report for C0: Missed #{missed} of #{sum.to_i} (Cov. #{coverage_c0}%) ✅"
-    end
     else
         report = "Simple Code coverage report for C0: Missed #{missed} of #{sum.to_i} (Cov. #{coverage_c0}%)"
     end
